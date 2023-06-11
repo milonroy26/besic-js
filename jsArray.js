@@ -16,6 +16,7 @@ const myName =  "milon Roy";
 const fromMethod = Array.from(myName);
 // console.log(fromMethod); //From() method Kno akta string ke array convert kre dei, and space ke length and index hisabe count kre.
 
+// filter 
 const ages = [16, 22, 44, 24, 45];
 
 function checkAdult(age){
@@ -53,6 +54,30 @@ const arrayPop = array1.pop();
 // JavaScript array push()
 const arrayPush = array1.push('soikot');
 console.log(`Array Push Element : ${arrayPush}`); //console korle index number show korbe
-console.log(array1); //Array push method Ahmar Total arrry ke change kore.
+// console.log(array1); //Array push method Ahmar Total arrry ke change kore.
+
+// JavaScript array reverse() 
+const array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const arrayReverse = array2.reverse();
+// console.log(arrayReverse); //Reverse main array ke change kre and pura array ta ke ultai dei.
+
+// JavaScript array slice()
+const array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const arraySlice = array3.slice(3, 6) //akane 456 ke keta nia asbo.Akane slice first number assign korar somai akta kop mare and 2nd number number akta kop mare. 2koper majamaji item gula ke nia ase. but main array change hoi na.
+// console.log(arraySlice);
+
+// JavaScript array sort()
+const array4 = [33, 55, 22, 44, 66, 35, 30];
+const arraySort = array4.sort();
+// console.log(arraySort); //Sort method main array ke change kre, and array item gulake scending order sajia nei.
+
+//JavaScript array splice()
+const array5 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const arraySpilice = array5.splice(4, 4, 40, 84, 97); //5 6 7 8 ke delate korbo,
+console.log(arraySpilice); //😇 Akane Ami Splice Method vitore je notun item gula add korlam je sob item delate korci tar jaigai item gula add hlo,kintu ami jdi chai amr array last kno item-er pre ai notun item gula add korte chai ta hle ki jabe?
+console.log(array5); //splice main array ke change kre, splice first peramiter start number ble dei, 2nd delete Count kre, then items add kre
+
+
+
 
 
