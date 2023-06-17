@@ -34,7 +34,9 @@ const d6 = new Date("2021-03-25");
 // console.log(d6.getMonth()); //output: 2; 0 hte count hoice;date return kre.
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
 const date = new Date();
+
 let month = months[d.getMonth()];
 // console.log(month);//output: june; running months nia aslo
 // console.log(date.getDate()); // tarik return korbe.

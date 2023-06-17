@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+<body>
+    
+    <p id="name"></p>
+
+    <button onclick="settimeOutCall()">Click</button>
+
+    <script>
+        
+        function alertCall(){
+            window.alert("alert call");
+        }
+
+        // confirm()
+
+        function confirmCall(){
+            let result = window.confirm("You are Readdy"); //yes / no ai 2ta result pabo.
+            document.write(result);
+        }
+
+        // prompt()
+        function promptCall(){
+            const name = document.getElementById('name');
+            let result = window.prompt("What is your name?");
+            name.innerText = result;  //prompt method window user kace kno akta input nei.
+        }
+
+        // open()
+        function openCall(){
+            window.open() //new akta tab open hbe.
+        }
+        
+        // close()
+        function closeCall(){
+            window.close() //karent tab ta close hbe
+        }
+
+        // setTimeout()
+        function settimeOutCall(){
+            setTimeout(function(){
+                window.alert("I am Readdy");
+            }, 4000)
+        }
+
+
+
+        
+        
+    </script>
+
+</body>
+</html> 
