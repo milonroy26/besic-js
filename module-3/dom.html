@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Lorem, ipsum.</p>
+    
+    <!-- finding name attributes -->
+    <p name="myName">Lorem, ipsum dolor.</p>
+
+    <script>
+
+        // FINDING HTML ELEMENTS -DOM
+        const tagName = document.getElementsByTagName('p')[1];
+        tagName.style.backgroundColor = "red";
+
+        // finding name attributes
+        const findName = document.getElementsByName('myName')[0]; //🫡confeution?
+        findName.style.backgroundColor = "orange";
+
+        // Display all name value pairs of cookies in a document
+        function myFunction(){
+            const element =  document.getElementsByTagName('p')[0];
+            element.innerHTML = 'my cook  :' + document.cookie;  //🫡Confeution?
+        }
+
+        // Display the domain name of the server that loaded the document
+        function myDomain(){
+            document.domain()
+        }
+
+        //last modify
+        function lastModifi (){
+            
+        }
+
+
+    </script>
+</body>
+</html>

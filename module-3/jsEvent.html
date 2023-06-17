@@ -6,20 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Event</title>
 </head>
+
 <body>
     
     <button onclick="myEvent('I am on click Event')">On Click</button>
-    <br>
+    <br> <br>
+
     <!--  change kore jodi ami baire click kori then call hbe. -->
-    <input type="text" onchange="myEvent('i am on change event')">
-    <br>
-    <button onmouseover="myEvent('I am on click Event')">On Click</button>
+    <input placeholder="onchange event" type="text" onchange="myEvent('i am on change event')">    
+    <br><br>
+
+    <!-- onkeydown() -->
+    <input type="text" placeholder="onkeydown evnet" onkeydown="myEvent('i am onkey down event')" `>
+    <br><br>
+
+
+
     <script>
-        
         function myEvent (message){
             console.log(message)
         }
-
     </script>
 
 </body>
