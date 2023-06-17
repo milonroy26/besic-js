@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document Object Model</title>
 </head>
 <body>
 
@@ -12,6 +12,9 @@
     
     <!-- finding name attributes -->
     <p name="myName">Lorem, ipsum dolor.</p>
+    <br><br><br>
+
+    <button onclick="replace()">Click</button>
 
     <script>
 
@@ -31,13 +34,34 @@
 
         // Display the domain name of the server that loaded the document
         function myDomain(){
-            document.domain()
+            document.domain;
         }
 
-        //last modify
-        function lastModifi (){
-            
+        //last modify date
+        function lastModifi(){
+           let modifiDate =  document.lastModified;
+           console.log(modifiDate);
         }
+
+        // document Title 
+        function webTitle(){
+            let titel = document.title;
+            console.log(titel);
+        }
+
+        //Url
+        function webUrl(){
+            let url = document.URL;
+            console.log(url);
+        }
+
+        // replace
+        function replace(){
+            document.open("text/html", "replace");
+            document.write("<h2> Hi I am Milon roy </h2>");
+            document.close();
+        }
+
 
 
     </script>
