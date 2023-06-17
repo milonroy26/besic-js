@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Object Model</title>
+    <style>
+        .bgDark{
+         background-color: black;
+         color: white;   
+        }
+    </style>
 </head>
-<body>
+<body id="body">
 
     <p>Lorem ipsum dolor sit.</p>
     <p>Lorem, ipsum.</p>
@@ -13,8 +19,37 @@
     <!-- finding name attributes -->
     <p name="myName">Lorem, ipsum dolor.</p>
     <br><br><br>
+     
+    <p id="sumBox">Sum:  </p>
+    <input id="number1" type="text">
+    <input id="number2" type="text">
 
-    <button onclick="replace()">Click</button>
+    <button onclick="addNumber()">Click</button>
+    <br><br>
+
+    <button onclick="cssManupulation()">Dark Mode</button>
+    <button onclick="removeCss()">White Mode</button>
+
+    <br><br>
+
+    <input id="myInput" placeholder="your name" type="text">
+    <ul id="myList">
+    
+    </ul>
+    <button onclick="appendELement()">Click</button>
+
+    <br><br>
+
+    <img id="myImg" src="https://fastly.picsum.photos/id/4/5000/3333.jpg?hmac=ghf06FdmgiD0-G4c9DdNM8RnBIN7BO0-ZGEw47khHP4" width="300" height="200" alt="">
+    <button onclick="changingAttribute()">Click</button>
+    <br><br>
+
+    <h1>h1 Tag</h1>
+    <h2 id="heading2">h2 Tag</h2>
+    <h3 class="heading3">h3 Tag</h3>
+    <h4 name="myName">h4 Tag</h4>
+    <input placeholder="" type="text">
+    <button onclick="change()">Click</button>
 
     <script>
 
@@ -23,13 +58,13 @@
         tagName.style.backgroundColor = "red";
 
         // finding name attributes
-        const findName = document.getElementsByName('myName')[0]; //🫡confeution?
+        const findName = document.getElementsByName('myName')[0]; //🤔confeution?
         findName.style.backgroundColor = "orange";
 
         // Display all name value pairs of cookies in a document
         function myFunction(){
             const element =  document.getElementsByTagName('p')[0];
-            element.innerHTML = 'my cook  :' + document.cookie;  //🫡Confeution?
+            element.innerHTML = 'my cook  :' + document.cookie;  //🤔Confeution?
         }
 
         // Display the domain name of the server that loaded the document
@@ -62,6 +97,59 @@
             document.close();
         }
 
+        // open a new window  and some content
+        function newEindow(){
+            let w = window.open();
+            w.document.open();
+            w.document.write("<h2> Hi i am milon roy </h2>");
+            w.document.close();
+        }
+
+        //HTML DOM FINDING FORM INPUT VALUE
+
+        function addNumber(){
+            let num1 = document.getElementById('number1').value;
+            let num2 = document.getElementById('number2').value;
+            let sum = parseFloat(num1) + parseFloat(num2);
+            let sumBox = document.getElementById('sumBox').innerText = sum;
+        }
+
+        //DOM HTML CSS MANUPULATION
+        function cssManupulation(){
+            let x = document.getElementById('body');
+            x.classList.add('bgDark'); 
+        }
+
+        function removeCss(){
+            let x = document.getElementById('body');
+            x.classList.remove('bgDark'); 
+        }
+
+        // DOM CREATE ELEMENT APPEND ELEMENT
+        function appendELement(){
+            let myInput = document.getElementById('myInput').value;
+            let myList = document.getElementById('myList');
+            let li = document.createElement('li');
+            li.innerHTML = myInput;
+            myList.appendChild(li);
+        }
+
+        //DOM CHANGING ATTRIBUTE VALUE
+        function changingAttribute(){
+            let img = document.getElementById('myImg');
+            img.src = 'https://fastly.picsum.photos/id/7/4728/3168.jpg?hmac=c5B5tfYFM9blHHMhuu4UKmhnbZoJqrzNOP9xjkV4w3o';
+            img.width = '400';
+            img.height = '300';
+        }
+
+        // DOM QUERY SELECTOR
+        function change(){
+            document.querySelector('h1').innerHTML = "This is a headding Tag";
+            document.querySelector('#heading2').innerHTML = "This is a headding two Tag";
+            document.querySelector('.heading3').innerHTML = "This is a headding there Tag";
+            document.querySelector('h4[name="myName"]').innerHTML = "This is a headding fore Tag";
+            document.querySelector('input').placeholder = "What is your name"; //🤔 do not change
+        }
 
 
     </script>
