@@ -17,7 +17,7 @@ const people = [
     { name: 'John', age: 30 },
     { name: 'Jane', age: 25 },
     { name: 'Mike', age: 35 }
-  ];
+];
   
 //   const capitalizedNames = people.map(perosn => {
 //     let userName = (perosn.name.toUpperCase());
